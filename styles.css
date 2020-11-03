@@ -33,24 +33,6 @@ body {
   height: auto;
 }
 
-body .area {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 100%;
-  color: white;
-}
-
 body nav {
   z-index: 10;
   display: -webkit-box;
@@ -68,14 +50,13 @@ body nav {
           flex-direction: row;
   padding: 1rem;
   justify-content: center;
-  height: 10%;
+  height: 10vh;
   width: 100%;
   color: white;
 }
 
 body nav .logo {
   cursor: pointer;
-  margin: 0rem 5rem;
 }
 
 body nav .logo:hover {
@@ -98,9 +79,12 @@ body nav ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   height: auto;
   z-index: 2;
-  width: auto;
+  width: 100%;
   list-style: none;
 }
 
@@ -143,6 +127,8 @@ body .reaching-hand {
           transform: rotate(90deg);
   z-index: 1;
   left: 0;
+  height: 30rem;
+  width: 30rem;
 }
 
 body .reaching-hand2 {
@@ -152,11 +138,33 @@ body .reaching-hand2 {
   bottom: -18%;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
+  height: 30rem;
+  width: 30rem;
 }
 
 body section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 60vh;
   z-index: 2;
   position: relative;
+}
+
+body section * {
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
 }
 
 body section .photoHolder {
@@ -173,9 +181,22 @@ body section .photoHolder {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: auto;
-  height: auto;
+  height: 23rem;
+  width: 30rem;
   position: relative;
+  margin: .75rem;
+  border-radius: 1rem;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+  border: 1rem solid #c9c9c9;
+  border-bottom: 5rem solid #c9c9c9;
+  background: url("./photos/meteorVolcano.jpg");
+  background-size: 100% 100%;
+}
+
+body section .photoHolder * {
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
 }
 
 body section .photoHolder h1 {
@@ -185,19 +206,8 @@ body section .photoHolder h1 {
   height: auto;
   text-align: center;
   position: absolute;
-  bottom: 7%;
+  bottom: -25%;
   color: black;
-}
-
-body section .photoHolder img {
-  margin: .75rem;
-  height: 23rem;
-  width: 28rem;
-  border-radius: 1rem;
-  -webkit-transition: all ease .5s;
-  transition: all ease .5s;
-  border: 1rem solid #c9c9c9;
-  border-bottom: 5rem solid #c9c9c9;
 }
 
 body section .photoSelections {
@@ -215,16 +225,16 @@ body section .photoSelections {
       -ms-flex-direction: row;
           flex-direction: row;
   position: absolute;
-  bottom: -20%;
+  bottom: -25%;
   color: white;
-  width: 50%;
+  width: 65%;
   height: 5rem;
 }
 
-body section .photoSelections .photo {
+body section .photo {
   cursor: pointer;
   height: 5rem;
-  width: 6rem;
+  width: 7.5rem;
   border-radius: .5rem;
   -webkit-transition: all ease .5s;
   transition: all ease .5s;
@@ -237,47 +247,47 @@ body section .photoSelections .photo {
   transition: all ease .25s;
 }
 
-body section .photoSelections .photo:hover {
+body section .photo:hover {
   -webkit-box-shadow: 0rem .5rem 1rem black;
           box-shadow: 0rem .5rem 1rem black;
   z-index: 100;
-  height: 5.5rem;
-  width: 6.5rem;
+  height: 6rem;
+  width: 9rem;
   margin: 0rem -.125rem;
   margin-bottom: 1rem;
 }
 
-body section .photoSelections .one {
+body section .one {
   z-index: 6;
   background: url("./photos/meteorVolcano.jpg");
   background-size: 100% 100%;
 }
 
-body section .photoSelections .two {
+body section .two {
   z-index: 5;
   background: url("./photos/lakeDeck.jpg");
   background-size: 100% 100%;
 }
 
-body section .photoSelections .three {
+body section .three {
   z-index: 4;
   background: url("./photos/lakePhoto.jpg");
   background-size: 100% 100%;
 }
 
-body section .photoSelections .four {
+body section .four {
   z-index: 3;
   background: url("./photos/springflowerPhoto.jpg");
   background-size: 100% 100%;
 }
 
-body section .photoSelections .five {
+body section .five {
   z-index: 2;
   background: url("./photos/parkTree.jpg");
   background-size: 100% 100%;
 }
 
-body section .photoSelections .six {
+body section .six {
   z-index: 1;
   background: url("./photos/sunsetLake.jpg");
   background-size: 100% 100%;
@@ -358,6 +368,39 @@ body section .photoSelections .six {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  body .reaching-hand, body .reaching-hand2 {
+    height: 20rem;
+    width: 20rem;
+    bottom: -15%;
+  }
+  body section .photoHolder {
+    height: 17rem;
+    width: 24rem;
+  }
+  body section .photoHolder h1 {
+    bottom: -35%;
+  }
+  body section .photoSelections {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body .reaching-hand, body .reaching-hand2 {
+    height: 20rem;
+    width: 20rem;
+    bottom: -15%;
+  }
+  body section .photoHolder {
+    height: 15rem;
+    width: 22rem;
+  }
+  body section .photoHolder h1 {
+    bottom: -45%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

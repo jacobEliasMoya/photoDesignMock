@@ -31,6 +31,7 @@ body {
   border: 1rem solid white;
   border-bottom: 5rem solid white;
   height: auto;
+  overflow: hidden;
 }
 
 body nav {
@@ -89,6 +90,7 @@ body nav ul {
 }
 
 body nav ul * {
+  text-shadow: 0 0 .5rem black;
   text-align: center;
 }
 
@@ -122,24 +124,24 @@ body nav ul li:hover ul li:hover {
 
 body .reaching-hand {
   position: absolute;
-  bottom: -18%;
+  bottom: -10%;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   z-index: 1;
   left: 0;
-  height: 30rem;
-  width: 30rem;
+  height: 25rem;
+  width: 25rem;
 }
 
 body .reaching-hand2 {
-  z-index: 1;
   position: absolute;
-  right: 0%;
-  bottom: -18%;
+  bottom: -10%;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
-  height: 30rem;
-  width: 30rem;
+  z-index: 1;
+  right: 0;
+  height: 25rem;
+  width: 25rem;
 }
 
 body section {
@@ -181,6 +183,7 @@ body section .photoHolder {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  opacity: .85;
   height: 23rem;
   width: 30rem;
   position: relative;
@@ -208,6 +211,11 @@ body section .photoHolder h1 {
   position: absolute;
   bottom: -25%;
   color: black;
+}
+
+body section .photoHolder:hover {
+  opacity: 1;
+  cursor: pointer;
 }
 
 body section .photoSelections {
@@ -257,40 +265,66 @@ body section .photo:hover {
   margin-bottom: 1rem;
 }
 
-body section .one {
+body section .natureone {
   z-index: 6;
   background: url("./photos/meteorVolcano.jpg");
   background-size: 100% 100%;
 }
 
-body section .two {
+body section .naturetwo {
   z-index: 5;
   background: url("./photos/lakeDeck.jpg");
   background-size: 100% 100%;
 }
 
-body section .three {
+body section .naturethree {
   z-index: 4;
-  background: url("./photos/lakePhoto.jpg");
-  background-size: 100% 100%;
-}
-
-body section .four {
-  z-index: 3;
   background: url("./photos/springflowerPhoto.jpg");
   background-size: 100% 100%;
 }
 
-body section .five {
-  z-index: 2;
-  background: url("./photos/parkTree.jpg");
+body section .bdayone {
+  z-index: 6;
+  background: url("./photos/bdaySetup.jpg");
   background-size: 100% 100%;
 }
 
-body section .six {
-  z-index: 1;
-  background: url("./photos/sunsetLake.jpg");
+body section .bdaytwo {
+  z-index: 5;
+  background: url("./photos/bdaycake.jpg");
   background-size: 100% 100%;
+}
+
+body section .bdaythree {
+  z-index: 4;
+  background: url("./photos/doggyBday.jpg");
+  background-size: 100% 100%;
+}
+
+body section .wedone {
+  z-index: 6;
+  background: url("./photos/loveHands.jpg");
+  background-size: 100% 100%;
+}
+
+body section .wedtwo {
+  z-index: 5;
+  background: url("./photos/pillowLove.jpg");
+  background-size: 100% 100%;
+}
+
+body section .wedthree {
+  z-index: 4;
+  background: url("./photos/weddingCelebrate.jpg");
+  background-size: 100% 100%;
+}
+
+body .photoType {
+  color: white;
+  position: absolute;
+  font-size: 6rem;
+  -webkit-transition: all ease .25s;
+  transition: all ease .25s;
 }
 
 @-webkit-keyframes neonOn {
@@ -365,6 +399,24 @@ body section .six {
   }
   30% {
     opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
   100% {
     opacity: 1;

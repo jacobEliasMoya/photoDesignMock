@@ -32,7 +32,7 @@ body{
     border: 1rem solid white;
     border-bottom: 5rem solid white;
     height: auto;
-
+    overflow: hidden;
     nav{
         z-index: 10;
         @include flexedCenterRow();
@@ -60,6 +60,7 @@ body{
             width: 100%;
             list-style: none;
             *{
+                text-shadow: 0 0 .5rem black;
                 text-align: center;
             }
             li{
@@ -95,23 +96,22 @@ body{
 
     .reaching-hand{
         position: absolute;
-        bottom: -18%;
+        bottom: -10%;
         transform: rotate(90deg);
         z-index: 1;
         left: 0;
-        height: 30rem;
-        width: 30rem;
+        height: 25rem;
+        width: 25rem;
     }
 
     .reaching-hand2{
-        z-index: 1;
         position: absolute;
-        right: 0%;
-        bottom: -18%;
+        bottom: -10%;
         transform: rotate(-90deg);
-        height: 30rem;
-        width: 30rem;
-
+        z-index: 1;
+        right: 0;
+        height: 25rem;
+        width: 25rem;
 
     }
 
@@ -130,6 +130,7 @@ body{
             }
     
             @include flexedCenterCol();
+            opacity: .85;
             height: 23rem;
             width: 30rem;
             position: relative;
@@ -151,6 +152,10 @@ body{
                 color: black;
             }
 
+            &:hover{
+                opacity: 1;
+                cursor: pointer;
+            }
         }
         .photoSelections{
             @include flexedCenterRow();
@@ -161,65 +166,94 @@ body{
             height: 5rem;
         }
 
-            .photo{
-                cursor: pointer;
-                height: 5rem;
-                width: 7.5rem;
-                border-radius: .5rem;
-                transition: all ease .5s;
-                background: black;
-                border: .5rem solid rgb(201, 201, 201);
-                border-bottom:1rem solid rgb(201, 201, 201);
-                box-shadow: .5rem .5rem 1rem black;
-                transition: all ease .25s;
-                &:hover{
-                    box-shadow: 0rem .5rem 1rem black;
-                    z-index: 100;
-                    height: 6rem;
-                    width: 9rem;
-                    margin: 0rem -.125rem;
-                    margin-bottom: 1rem;
-                    // animation-name: camFlash;
-                    // animation-iteration-count: 1;
-                    // animation-duration: 2.5s;
-                }
+        .photo{
+            cursor: pointer;
+            height: 5rem;
+            width: 7.5rem;
+            border-radius: .5rem;
+            transition: all ease .5s;
+            background: black;
+            border: .5rem solid rgb(201, 201, 201);
+            border-bottom:1rem solid rgb(201, 201, 201);
+            box-shadow: .5rem .5rem 1rem black;
+            transition: all ease .25s;
+            &:hover{
+                box-shadow: 0rem .5rem 1rem black;
+                z-index: 100;
+                height: 6rem;
+                width: 9rem;
+                margin: 0rem -.125rem;
+                margin-bottom: 1rem;
+                // animation-name: camFlash;
+                // animation-iteration-count: 1;
+                // animation-duration: 2.5s;
             }
-            .one{
-                z-index: 6;
-                background: url('./photos/meteorVolcano.jpg');
-                background-size: 100% 100%;
+        }
+        .natureone{
+            z-index: 6;
+            background: url('./photos/meteorVolcano.jpg');
+            background-size: 100% 100%;
+            
 
-            }
-            .two{
-                z-index: 5;
-                background: url('./photos/lakeDeck.jpg');
-                background-size: 100% 100%;
+        }
+        .naturetwo{
+            z-index: 5;
+            background: url('./photos/lakeDeck.jpg');
+            background-size: 100% 100%;
 
-            }
-            .three{
-                z-index: 4;
-                background: url('./photos/lakePhoto.jpg');
-                background-size: 100% 100%;
+        }
+        .naturethree{
+            z-index: 4;
+            background: url('./photos/springflowerPhoto.jpg');
+            background-size: 100% 100%;
 
-            }
-            .four{
-                z-index: 3;
-                background: url('./photos/springflowerPhoto.jpg');
-                background-size: 100% 100%;
+        }
+        .bdayone{
+            z-index: 6;
+            background: url('./photos/bdaySetup.jpg');
+            background-size: 100% 100%;
+            
 
-            }
-            .five{
-                z-index: 2;
-                background: url('./photos/parkTree.jpg');
-                background-size: 100% 100%;
+        }
+        .bdaytwo{
+            z-index: 5;
+            background: url('./photos/bdaycake.jpg');
+            background-size: 100% 100%;
 
-            }
-            .six{
-                z-index: 1;
-                background: url('./photos/sunsetLake.jpg');
-                background-size: 100% 100%;
+        }
+        .bdaythree{
+            z-index: 4;
+            background: url('./photos/doggyBday.jpg');
+            background-size: 100% 100%;
 
-            }
+        }
+        .wedone{
+            z-index: 6;
+            background: url('./photos/loveHands.jpg');
+            background-size: 100% 100%;
+            
+
+        }
+        .wedtwo{
+            z-index: 5;
+            background: url('./photos/pillowLove.jpg');
+            background-size: 100% 100%;
+
+        }
+        .wedthree{
+            z-index: 4;
+            background: url('./photos/weddingCelebrate.jpg');
+            background-size: 100% 100%;
+
+        }
+
+    }
+
+    .photoType{
+        color: white;
+        position: absolute;
+        font-size:6rem;
+        transition: all ease .25s;
 
     }
 
@@ -266,6 +300,17 @@ body{
         opacity: 1;
     }
 }
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 
 @media screen and (max-width: 1000px) {
     body{

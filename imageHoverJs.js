@@ -1,4 +1,4 @@
-let imgHov = {
+let imgHovChange = {
 
     photos: document.querySelectorAll('.photoSelections .photo'),
     backDrop : document.querySelector('.photoHolder'),
@@ -8,6 +8,11 @@ let imgHov = {
 
     photoArr : [],
     currentInd : 0,
+
+    photoT : document.querySelector('.photoType'),
+    mainPhotoT : document.querySelectorAll('.mainPhotoType'),
+
+    curPhotoT : 'Nature',
 
     createPhotoArray(){
         this.photos.forEach(photo=>{
@@ -21,65 +26,478 @@ let imgHov = {
 
     
     createClasses(e){
-        switch(this.currentInd){
-            case 0:
-                e.classList.add('one');
-                e.classList.remove('two');
-                e.classList.remove('three');
-                e.classList.remove('four');
-                e.classList.remove('five');
-                e.classList.remove('six');
+
+        switch(this.curPhotoT){
+            case 'Nature':
+                switch(this.currentInd){
+                    case 0:
+                        e.classList.add('natureone');
+                        e.classList.remove('naturetwo');
+                        e.classList.remove('naturethree');
+                        e.classList.remove('naturefour');
+                        e.classList.remove('naturefive');
+                        e.classList.remove('naturesix');
+
+                        e.classList.remove('bdayone');
+                        e.classList.remove('bdaytwo');
+                        e.classList.remove('bdaythree');
+                        e.classList.remove('bdayfour');
+                        e.classList.remove('bdayfive');
+                        e.classList.remove('bdaysix');
+
+                        e.classList.remove('wedone');
+                        e.classList.remove('wedtwo');
+                        e.classList.remove('wedthree');
+                        e.classList.remove('wedfour');
+                        e.classList.remove('wedfive');
+                        e.classList.remove('wedsix');
 
 
-            break
-            case 1:
-                e.classList.add('two');
-                e.classList.remove('one');
-                e.classList.remove('three');
-                e.classList.remove('four');
-                e.classList.remove('five');
-                e.classList.remove('six');
+        
+        
+                    break
+                    case 1:
+                        e.classList.add('naturetwo');
+                        e.classList.remove('natureone');
+                        e.classList.remove('naturethree');
+                        e.classList.remove('naturefour');
+                        e.classList.remove('naturefive');
+                        e.classList.remove('naturesix');
+        
+                        e.classList.remove('bdayone');
+                        e.classList.remove('bdaytwo');
+                        e.classList.remove('bdaythree');
+                        e.classList.remove('bdayfour');
+                        e.classList.remove('bdayfive');
+                        e.classList.remove('bdaysix');
 
-                
-            break
-            case 2:
-                e.classList.add('three');
-                e.classList.remove('one');
-                e.classList.remove('two');
-                e.classList.remove('four');
-                e.classList.remove('five');
-                e.classList.remove('six');
+                        e.classList.remove('wedone');
+                        e.classList.remove('wedtwo');
+                        e.classList.remove('wedthree');
+                        e.classList.remove('wedfour');
+                        e.classList.remove('wedfive');
+                        e.classList.remove('wedsix');
 
-            break
-            case 3:
-                e.classList.add('four');
-                e.classList.remove('two');
-                e.classList.remove('three');
-                e.classList.remove('one');
-                e.classList.remove('five');
-                e.classList.remove('six');
 
-            break
-            case 4:
-                e.classList.add('five');
-                e.classList.remove('two');
-                e.classList.remove('three');
-                e.classList.remove('four');
-                e.classList.remove('one');
-                e.classList.remove('six');
+                    break
+                    case 2:
+                        e.classList.add('naturethree');
+                        e.classList.remove('natureone');
+                        e.classList.remove('naturetwo');
+                        e.classList.remove('naturefour');
+                        e.classList.remove('naturefive');
+                        e.classList.remove('naturesix');
 
-            break
-            case 5:
-                e.classList.add('six');
-                e.classList.remove('two');
-                e.classList.remove('three');
-                e.classList.remove('four');
-                e.classList.remove('five');
-                e.classList.remove('one');
+                        e.classList.remove('bdayone');
+                        e.classList.remove('bdaytwo');
+                        e.classList.remove('bdaythree');
+                        e.classList.remove('bdayfour');
+                        e.classList.remove('bdayfive');
+                        e.classList.remove('bdaysix');
 
-            break
+                        e.classList.remove('wedone');
+                        e.classList.remove('wedtwo');
+                        e.classList.remove('wedthree');
+                        e.classList.remove('wedfour');
+                        e.classList.remove('wedfive');
+                        e.classList.remove('wedsix');
+
+
+                        
+
+                        break
+                    case 3:
+                        e.classList.add('naturefour');
+                        e.classList.remove('naturetwo');
+                        e.classList.remove('naturethree');
+                        e.classList.remove('natureone');
+                        e.classList.remove('naturefive');
+                        e.classList.remove('naturesix');
+        
+                        e.classList.remove('bdayone');
+                        e.classList.remove('bdaytwo');
+                        e.classList.remove('bdaythree');
+                        e.classList.remove('bdayfour');
+                        e.classList.remove('bdayfive');
+                        e.classList.remove('bdaysix');
+
+                        e.classList.remove('wedone');
+                        e.classList.remove('wedtwo');
+                        e.classList.remove('wedthree');
+                        e.classList.remove('wedfour');
+                        e.classList.remove('wedfive');
+                        e.classList.remove('wedsix');
+
+
+                    break
+                    case 4:
+                        e.classList.add('naturefive');
+                        e.classList.remove('naturetwo');
+                        e.classList.remove('naturethree');
+                        e.classList.remove('naturefour');
+                        e.classList.remove('natureone');
+                        e.classList.remove('naturesix');
+
+                        e.classList.remove('bdayone');
+                        e.classList.remove('bdaytwo');
+                        e.classList.remove('bdaythree');
+                        e.classList.remove('bdayfour');
+                        e.classList.remove('bdayfive');
+                        e.classList.remove('bdaysix');
+
+        
+                        e.classList.remove('wedone');
+                        e.classList.remove('wedtwo');
+                        e.classList.remove('wedthree');
+                        e.classList.remove('wedfour');
+                        e.classList.remove('wedfive');
+                        e.classList.remove('wedsix');
+
+
+        
+                    break
+                    case 5:
+                        e.classList.add('naturesix');
+                        e.classList.remove('naturetwo');
+                        e.classList.remove('naturethree');
+                        e.classList.remove('naturefour');
+                        e.classList.remove('naturefive');
+                        e.classList.remove('natureone');
+
+                        e.classList.remove('bdayone');
+                        e.classList.remove('bdaytwo');
+                        e.classList.remove('bdaythree');
+                        e.classList.remove('bdayfour');
+                        e.classList.remove('bdayfive');
+                        e.classList.remove('bdaysix');
+        
+                        e.classList.remove('wedone');
+                        e.classList.remove('wedtwo');
+                        e.classList.remove('wedthree');
+                        e.classList.remove('wedfour');
+                        e.classList.remove('wedfive');
+                        e.classList.remove('wedsix');
+
+
+                    break
+        
+                }
+            break;
+            case 'Birthdays':
+                switch(this.currentInd){
+                    case 0:
+                        //remove all
+                        e.classList.remove('natureone');
+                        e.classList.remove('naturetwo');
+                        e.classList.remove('naturethree');
+                        e.classList.remove('naturefour');
+                        e.classList.remove('naturefive');
+                        e.classList.remove('naturesix');
+                        //add em in
+                        e.classList.add('bdayone');
+                        e.classList.remove('bdaytwo');
+                        e.classList.remove('bdaythree');
+                        e.classList.remove('bdayfour');
+                        e.classList.remove('bdayfive');
+                        e.classList.remove('bdaysix');
+
+                        e.classList.remove('wedone');
+                        e.classList.remove('wedtwo');
+                        e.classList.remove('wedthree');
+                        e.classList.remove('wedfour');
+                        e.classList.remove('wedfive');
+                        e.classList.remove('wedsix');
+
+
+        
+        
+                    break
+                    case 1:
+                        //remove all
+                        e.classList.remove('natureone');
+                        e.classList.remove('naturetwo');
+                        e.classList.remove('naturethree');
+                        e.classList.remove('naturefour');
+                        e.classList.remove('naturefive');
+                        e.classList.remove('naturesix');
+                        //add em in
+                        
+                        e.classList.add('bdaytwo');
+                        e.classList.remove('bdayone');
+                        e.classList.remove('bdaythree');
+                        e.classList.remove('bdayfour');
+                        e.classList.remove('bdayfive');
+                        e.classList.remove('bdaysix');
+        
+                        e.classList.remove('wedone');
+                        e.classList.remove('wedtwo');
+                        e.classList.remove('wedthree');
+                        e.classList.remove('wedfour');
+                        e.classList.remove('wedfive');
+                        e.classList.remove('wedsix');
+
+                        
+                    break
+                    case 2:
+                        //remove all
+                        e.classList.remove('natureone');
+                        e.classList.remove('naturetwo');
+                        e.classList.remove('naturethree');
+                        e.classList.remove('naturefour');
+                        e.classList.remove('naturefive');
+                        e.classList.remove('naturesix');
+                        //add em in
+                        e.classList.add('bdaythree');
+                        e.classList.remove('bdayone');
+                        e.classList.remove('bdaytwo');
+                        e.classList.remove('bdayfour');
+                        e.classList.remove('bdayfive');
+                        e.classList.remove('bdaysix');
+        
+                        e.classList.remove('wedone');
+                        e.classList.remove('wedtwo');
+                        e.classList.remove('wedthree');
+                        e.classList.remove('wedfour');
+                        e.classList.remove('wedfive');
+                        e.classList.remove('wedsix');
+
+                    break
+                    case 3:
+                        //remove all
+                        e.classList.remove('natureone');
+                        e.classList.remove('naturetwo');
+                        e.classList.remove('naturethree');
+                        e.classList.remove('naturefour');
+                        e.classList.remove('naturefive');
+                        e.classList.remove('naturesix');
+                        //add em in
+                        e.classList.add('bdayfour');
+                        e.classList.remove('bdaytwo');
+                        e.classList.remove('bdaythree');
+                        e.classList.remove('bdayone');
+                        e.classList.remove('bdayfive');
+                        e.classList.remove('bdaysix');
+        
+                        e.classList.remove('wedone');
+                        e.classList.remove('wedtwo');
+                        e.classList.remove('wedthree');
+                        e.classList.remove('wedfour');
+                        e.classList.remove('wedfive');
+                        e.classList.remove('wedsix');
+
+                    break
+                    case 4:
+                        //remove all
+                        e.classList.remove('natureone');
+                        e.classList.remove('naturetwo');
+                        e.classList.remove('naturethree');
+                        e.classList.remove('naturefour');
+                        e.classList.remove('naturefive');
+                        e.classList.remove('naturesix');
+                        //add em in
+                        e.classList.add('bdayfive');
+                        e.classList.remove('bdaytwo');
+                        e.classList.remove('bdaythree');
+                        e.classList.remove('bdayfour');
+                        e.classList.remove('bdayone');
+                        e.classList.remove('bdaysix');
+
+                        
+                        e.classList.remove('wedone');
+                        e.classList.remove('wedtwo');
+                        e.classList.remove('wedthree');
+                        e.classList.remove('wedfour');
+                        e.classList.remove('wedfive');
+                        e.classList.remove('wedsix');
+        
+                    break
+                    case 5:
+                        //remove all
+                        e.classList.remove('natureone');
+                        e.classList.remove('naturetwo');
+                        e.classList.remove('naturethree');
+                        e.classList.remove('naturefour');
+                        e.classList.remove('naturefive');
+                        e.classList.remove('naturesix');
+                        //add em in
+                        e.classList.add('bdaysix');
+                        e.classList.remove('bdaytwo');
+                        e.classList.remove('bdaythree');
+                        e.classList.remove('bdayfour');
+                        e.classList.remove('bdayfive');
+                        e.classList.remove('bdayone');
+        
+                        e.classList.remove('wedone');
+                        e.classList.remove('wedtwo');
+                        e.classList.remove('wedthree');
+                        e.classList.remove('wedfour');
+                        e.classList.remove('wedfive');
+                        e.classList.remove('wedsix');
+
+
+                    break
+        
+                }
+            break;
+            case 'Weddings':
+                switch(this.currentInd){
+                    case 0:
+                        //remove all
+                        e.classList.remove('natureone');
+                        e.classList.remove('naturetwo');
+                        e.classList.remove('naturethree');
+                        e.classList.remove('naturefour');
+                        e.classList.remove('naturefive');
+                        e.classList.remove('naturesix');
+                        //add em in
+                        e.classList.remove('bdayone');
+                        e.classList.remove('bdaytwo');
+                        e.classList.remove('bdaythree');
+                        e.classList.remove('bdayfour');
+                        e.classList.remove('bdayfive');
+                        e.classList.remove('bdaysix');
+
+                        e.classList.add('wedone');
+                        e.classList.remove('wedtwo');
+                        e.classList.remove('wedthree');
+                        e.classList.remove('wedfour');
+                        e.classList.remove('wedfive');
+                        e.classList.remove('wedsix');
+
+
+        
+        
+                    break
+                    case 1:
+                        //remove all
+                        e.classList.remove('natureone');
+                        e.classList.remove('naturetwo');
+                        e.classList.remove('naturethree');
+                        e.classList.remove('naturefour');
+                        e.classList.remove('naturefive');
+                        e.classList.remove('naturesix');
+                        //add em in
+                        
+                        e.classList.remove('bdaytwo');
+                        e.classList.remove('bdayone');
+                        e.classList.remove('bdaythree');
+                        e.classList.remove('bdayfour');
+                        e.classList.remove('bdayfive');
+                        e.classList.remove('bdaysix');
+        
+                        e.classList.remove('wedone');
+                        e.classList.add('wedtwo');
+                        e.classList.remove('wedthree');
+                        e.classList.remove('wedfour');
+                        e.classList.remove('wedfive');
+                        e.classList.remove('wedsix');
+
+                        
+                    break
+                    case 2:
+                        //remove all
+                        e.classList.remove('natureone');
+                        e.classList.remove('naturetwo');
+                        e.classList.remove('naturethree');
+                        e.classList.remove('naturefour');
+                        e.classList.remove('naturefive');
+                        e.classList.remove('naturesix');
+                        //add em in
+                        e.classList.remove('bdaythree');
+                        e.classList.remove('bdayone');
+                        e.classList.remove('bdaytwo');
+                        e.classList.remove('bdayfour');
+                        e.classList.remove('bdayfive');
+                        e.classList.remove('bdaysix');
+        
+                        e.classList.remove('wedone');
+                        e.classList.remove('wedtwo');
+                        e.classList.add('wedthree');
+                        e.classList.remove('wedfour');
+                        e.classList.remove('wedfive');
+                        e.classList.remove('wedsix');
+
+                    break
+                    case 3:
+                        //remove all
+                        e.classList.remove('natureone');
+                        e.classList.remove('naturetwo');
+                        e.classList.remove('naturethree');
+                        e.classList.remove('naturefour');
+                        e.classList.remove('naturefive');
+                        e.classList.remove('naturesix');
+                        //add em in
+                        e.classList.remove('bdayfour');
+                        e.classList.remove('bdaytwo');
+                        e.classList.remove('bdaythree');
+                        e.classList.remove('bdayone');
+                        e.classList.remove('bdayfive');
+                        e.classList.remove('bdaysix');
+        
+                        e.classList.remove('wedone');
+                        e.classList.remove('wedtwo');
+                        e.classList.remove('wedthree');
+                        e.classList.add('wedfour');
+                        e.classList.remove('wedfive');
+                        e.classList.remove('wedsix');
+
+                    break
+                    case 4:
+                        //remove all
+                        e.classList.remove('natureone');
+                        e.classList.remove('naturetwo');
+                        e.classList.remove('naturethree');
+                        e.classList.remove('naturefour');
+                        e.classList.remove('naturefive');
+                        e.classList.remove('naturesix');
+                        //add em in
+                        e.classList.remove('bdayfive');
+                        e.classList.remove('bdaytwo');
+                        e.classList.remove('bdaythree');
+                        e.classList.remove('bdayfour');
+                        e.classList.remove('bdayone');
+                        e.classList.remove('bdaysix');
+
+                        
+                        e.classList.remove('wedone');
+                        e.classList.remove('wedtwo');
+                        e.classList.remove('wedthree');
+                        e.classList.remove('wedfour');
+                        e.classList.add('wedfive');
+                        e.classList.remove('wedsix');
+        
+                    break
+                    case 5:
+                        //remove all
+                        e.classList.remove('natureone');
+                        e.classList.remove('naturetwo');
+                        e.classList.remove('naturethree');
+                        e.classList.remove('naturefour');
+                        e.classList.remove('naturefive');
+                        e.classList.remove('naturesix');
+                        //add em in
+                        e.classList.remove('bdaysix');
+                        e.classList.remove('bdaytwo');
+                        e.classList.remove('bdaythree');
+                        e.classList.remove('bdayfour');
+                        e.classList.remove('bdayfive');
+                        e.classList.remove('bdayone');
+        
+                        e.classList.remove('wedone');
+                        e.classList.remove('wedtwo');
+                        e.classList.remove('wedthree');
+                        e.classList.remove('wedfour');
+                        e.classList.remove('wedfive');
+                        e.classList.add('wedsix');
+
+
+                    break
+        
+                }
+            break;
 
         }
+
     },
 
     changeImgText(){
@@ -92,33 +510,40 @@ let imgHov = {
 
             break
             case 2:
-                this.backDropText.innerHTML = '2/26/2020 | ..Clouded Head..'
-
-            break
-            case 3:
-                this.backDropText.innerHTML = '7/12/2020 | ..Flowery Bed..'
-
-            break
-            case 4:
-                this.backDropText.innerHTML = '2/9/2020 | ..Green Thumb..'
-
-            break
-            case 5:
-                this.backDropText.innerHTML = '5/12/2019 | ..Autumn Fun..'
+                this.backDropText.innerHTML = '2/26/2020 | ..Flowery Bed..'
 
             break
 
         }
+    },
+
+    reAssignPhotoT(listItem){
+        this.curPhotoT = listItem.innerHTML;
+        this.photoT.innerHTML = this.curPhotoT;
     }
+
 
 }
 
-imgHov.createPhotoArray();
+imgHovChange.createPhotoArray();
 
-imgHov.photos.forEach(p=>{
+imgHovChange.photos.forEach(p=>{
     p.addEventListener('mouseover',()=>{
-        imgHov.setInd(p);
-        imgHov.createClasses(imgHov.backDrop)
-        imgHov.changeImgText(imgHov.backDropText)
+        imgHovChange.setInd(p);
+        imgHovChange.createClasses(imgHovChange.backDrop)
+        imgHovChange.changeImgText(imgHovChange.backDropText)
+
+    })
+})
+
+imgHovChange.mainPhotoT.forEach(li=>{
+    li.addEventListener('click',()=>{
+        imgHovChange.reAssignPhotoT(li);
+        imgHovChange.createClasses(imgHovChange.backDrop)
+
+        imgHovChange.photos.forEach(p=>{
+            imgHovChange.setInd(p);
+            imgHovChange.createClasses(p)
+        })
     })
 })
